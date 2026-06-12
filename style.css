@@ -2,6 +2,8 @@
   width: 1280px;
   margin: 0 auto;
   background: #e6dfdf;
+  padding-top: 220px;
+  padding-bottom: 116px;
 }
 
 
@@ -13,6 +15,7 @@ body {
   margin: 0;
 }
 
+
 h1 {
   font-style: normal;
   font-weight: 400;
@@ -20,7 +23,6 @@ h1 {
   line-height: 78px;
   text-align: center;
   color: #515076;
-  margin-top: 220px;
   margin-bottom: 110px;
   margin-left: 217px;
   margin-right: 217px;
@@ -28,11 +30,11 @@ h1 {
 
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 340px);
-  gap: 45px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-
+  gap: 45px;
+  margin-bottom: 116px;
 }
 
 
