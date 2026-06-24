@@ -50,14 +50,52 @@ h1 {
   border: 1px solid #e8e7ef;
   background: #f7f6fb;
   padding: 25px;
+  position: relative;
+}
+
+.sale {
+  position: absolute;
+  bottom: 395px;
+  left: 25px;
+  padding: 5px 10px;
+  background: red;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.card-sale {
+  transition: 0.3s;
+}
+
+.card-sale:hover {
+  transform: scale(1.03);
+  background-image: url(img/background.png);
+  cursor: pointer;
+
 }
 
 .card-img {
   width: 290px;
   height: 245px;
   object-fit: cover;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
+
+.rating-numbers {
+  color: black;
+  margin-right: 5px;
+}
+
+i {
+  color: gold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+
+
+
 
 .description {
   font-weight: 400;
@@ -103,6 +141,10 @@ ul {
 
 li {
   margin-bottom: 5px;
+}
+
+.price-discount {
+  color: red;
 }
 
 .price-row {

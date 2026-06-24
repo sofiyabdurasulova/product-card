@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Выбери свой продукт</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,8 +17,18 @@
   <main class="container">
     <h1>Выбери свой продукт</h1>
     <div class="cards">
-      <div class="card">
+      <div class="card card-sale">
+        <span class="sale">-50%</span>
         <img class="card-img" src="img/photo-mousse.jpg" alt="Увлажняющий мусс">
+        <div class="rating">
+          <span class="rating-numbers">3.5</span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star-half-stroke"></i></span>
+          <span class="rating-stars"><i class="fa-regular fa-star"></i></span>
+        </div>
+
         <span class="description">для нормальной кожи</span>
         <h2>Увлажняющий мусс</h2>
         <p>Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
@@ -28,12 +40,20 @@
         </ul>
         <div class="price-row">
           <b>Цена</b>
-          <span class="price">2 750 ₽</span>
+          <span class="price price-discount"><del>2 750 ₽</del>1 375 ₽</span>
         </div>
         <button class="buy-button">Купить</button>
       </div>
       <div class="card">
         <img class="card-img" src="img/photo-mask.jpg" alt="Увлажняющая маска">
+        <div class="rating">
+          <span class="rating-numbers">4.5</span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star-half-stroke"></i></span>
+        </div>
         <span class="description">для нормальной кожи</span>
         <h2>Увлажняющая маска</h2>
         <p>Способствует удерживанию влаги в верхних слоях кожи.</p>
@@ -51,6 +71,14 @@
       </div>
       <div class="card">
         <img class="card-img" src="img/photo-gel.jpg" alt="Гель для умывания">
+        <div class="rating">
+          <span class="rating-numbers">3.0</span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-regular fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-regular fa-star"></i></span>
+        </div>
         <span class="description">для нормальной кожи</span>
         <h2>Гель для умывания</h2>
         <p>Интенсивно очищает, не повреждает защитный барьер кожи.</p>
@@ -68,6 +96,14 @@
       </div>
       <div class="card">
         <img class="card-img" src="img/photo-set-1.jpg" alt="Подарочный набор №1">
+        <div class="rating">
+          <span class="rating-numbers">5.0</span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+        </div>
         <span class="description">для нормальной кожи</span>
         <h2>Подарочный набор №1</h2>
         <p>Набор, состоящий из увлажняющего крема и маски.</p>
@@ -85,6 +121,14 @@
       </div>
       <div class="card">
         <img class="card-img" src="img/photo-set-5.jpg" alt="Подарочный набор №5">
+        <div class="rating">
+          <span class="rating-numbers">2.5</span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-solid fa-star-half-stroke"></i></span>
+          <span class="rating-stars"><i class="fa-regular fa-star"></i></span>
+          <span class="rating-stars"><i class="fa-regular fa-star"></i></span>
+        </div>
         <span class="description">для нормальной кожи</span>
         <h2>Подарочный набор №5</h2>
         <p> Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
