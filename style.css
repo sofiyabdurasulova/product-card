@@ -4,13 +4,13 @@
   background: #fefffd;
   padding-top: 220px;
   padding-bottom: 116px;
+}
+
+.container__background {
   background-image: url('img/background.png');
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 790px 697px;
 }
-
-
 
 body {
   color: #515076;
@@ -43,7 +43,7 @@ body {
 }
 
 
-.container__card {
+.card {
   width: 340px;
   border: 1px solid #e8e7ef;
   background: #f7f6fb;
@@ -73,14 +73,14 @@ body {
 
 }
 
-.card__card-img {
+.card__img {
   width: 290px;
   height: 245px;
   object-fit: cover;
   margin-bottom: 20px;
 }
 
-.card__rating-numbers {
+.card__rating-number {
   color: black;
   margin-right: 5px;
 }
@@ -129,7 +129,7 @@ i {
   margin-bottom: 5px;
 }
 
-.card__item {
+.card__list {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -137,7 +137,7 @@ i {
   padding-left: 20px;
 }
 
-.card__item-text {
+.card__item {
   margin-bottom: 5px;
 }
 
