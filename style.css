@@ -36,10 +36,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 45px;
-  margin-bottom: 116px;
+  margin: 0 auto;
   width: 1110px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
@@ -154,7 +152,7 @@ i {
 }
 
 .card__buy-button {
-  width: 100%;
+  width: 80%;
   height: 40px;
   background: #515076;
   border-radius: 10px;
@@ -174,6 +172,31 @@ i {
 }
 
 .card__buy-button:active {
+  background: #2e2b5c;
+  transition: background 0.1s ease;
+}
+
+.add-to-card__button {
+  width: 40px;
+  height: 40px;
+  background: #515076;
+  border-radius: 10px;
+  color: #f3f1f1;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+  transition: background 0.5s ease;
+}
+
+.add-to-card__button:hover {
+  background: #403d6b;
+  transition: background 0.1s ease;
+}
+
+.add-to-card__button:active {
   background: #2e2b5c;
   transition: background 0.1s ease;
 }
