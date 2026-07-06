@@ -1,5 +1,5 @@
 let cart = [];
-let buttons = document.querySelectorAll('.card__add-to-card');
+let buttons = document.querySelectorAll('.card__add-to-cart');
 
 buttons.forEach(function (button) {
   button.addEventListener('click', function () {
