@@ -210,6 +210,8 @@ body {
 }
 
 .card__item {
+  list-style-type: circle;
+  font-size: 15px;
   margin-bottom: 5px;
 }
 
@@ -279,6 +281,15 @@ body {
 
 .cart-icon {
   color: white;
+}
+
+.toggle-cards-active {
+  background-color: #bcdac9;
+
+}
+
+.toggle-card-active {
+  background-color: #89c7a5;
 }
 
 *,
