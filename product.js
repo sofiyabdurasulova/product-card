@@ -1,42 +1,38 @@
 const cart = [];
-const buttons = document.querySelectorAll('.card__add-to-cart');
+const cartButtons = document.querySelectorAll('.card__add-to-cart');
 
-buttons.forEach(function (button) {
+cartButtons.forEach(function (button) {
   button.addEventListener('click', function () {
-    let productName = button.closest('.card').querySelector('.card__title').textContent.trim();
+    const productName = button.closest('.card').querySelector('.card__title').textContent.trim();
     cart.push(productName);
     console.log("Товар добавлен в корзину:", cart);
   });
 });
 const mainTitle = document.querySelector('.container__main-title');
 mainTitle.addEventListener('mouseenter', () => {
-  console.log(mainTitle.textContent);
-})
+  console.log(mainTitle.textContent.trim());
+});
 const card = document.querySelector('.card');
-const toggleCardColor = document.querySelector('.card__buy-button');
-toggleCardColor.addEventListener('click', () => {
+const cardBuyButton = document.querySelector('.card__buy-button');
+cardBuyButton.addEventListener('click', () => {
   card.classList.toggle('toggle-card-active');
-})
+});
 const cards = document.querySelectorAll('.card');
-const toggleCardsColor = document.querySelector('.cards-button');
-console.log(toggleCardsColor);
-toggleCardsColor.addEventListener('click', () => {
-  console.log('click!');
+const cardsButton = document.querySelector('.cards-button');
+cardsButton.addEventListener('click', () => {
   cards.forEach((card) => card.classList.toggle('toggle-cards-active'));
-})
+});
 const openDokaButton = document.querySelector('.open-doka');
-openDokaButton.addEventListener('click', openDoka)
+openDokaButton.addEventListener('click', openDoka);
 function openDoka() {
   const answer = confirm('Вы действительно хотите открыть Дока?');
-  if (answer === true) {
+  if (answer) {
     window.open('https://doka.guide');
-  } else {
-    return
   }
-}
+};
 const outputConsoleButton = document.querySelector('.output-console-log');
-outputConsoleButton.addEventListener('click', () => outputConsoleLOg('дз №6'));
-function outputConsoleLOg(message) {
+outputConsoleButton.addEventListener('click', () => outputConsoleLog('дз №6'));
+function outputConsoleLog(message) {
   alert(message);
   console.log(message);
-}
+};
