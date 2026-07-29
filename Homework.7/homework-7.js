@@ -1,39 +1,40 @@
-const weather = (city, temperature) => {
-  console.log(`Сейчас в городе ${city} температура ${temperature} градусов по Цельсию.`)
+const getTemperature = (city, temperature) => {
+  console.log(
+    `Сейчас в городе ${city} температура ${temperature} градусов по Цельсию.`,
+  );
 };
-weather('Istambul', '25°C');
+getTemperature("Istambul", "25°C");
 
 const SPEED_OF_LIGHT = 299792458;
 const chekSpeed = (speed) => {
   if (speed > SPEED_OF_LIGHT) {
-    console.log('сверхсветовая скорость')
-  } if (speed < SPEED_OF_LIGHT) {
-    console.log('субсветовая скорость')
+    console.log("сверхсветовая скорость");
+  }
+  if (speed < SPEED_OF_LIGHT) {
+    console.log("субсветовая скорость");
   } else {
-    console.log('скорость света')
-  };
+    console.log("скорость света");
+  }
 };
 chekSpeed(299792458);
 
-const car = 'bmw'
-const carPrise = 40000
-const myBudget = (budget) => {
-  if (budget > car) {
-    console.log('${car} приобретен. Спасибо за покупку!')
+const car = "bmw";
+const carPrise = 40000;
+const buyCar = (budget) => {
+  if (budget >= carPrise) {
+    console.log(`${car} приобретен. Спасибо за покупку!`);
   } else {
-    console.log(' Вам не хватает 1$, пополните баланс.')
-  };
+    const difference = carPrise - budget;
+    console.log(`Вам не хватает ${difference}$, пополните баланс.`);
+  }
 };
-myBudget(39999);
+buyCar(35000);
 
-const myCity = (cityName) => {
-  console.log(cityName)
+const showCity = (cityName) => {
+  console.log(cityName);
 };
-myCity('Makkah');
-const carBrand = 'Toyota';
-const carModel = 'RAV4';
-const carSpeed = 190
-console.log(
-  carBrand,
-  carModel,
-  carSpeed)
+showCity("Makkah");
+const carBrand = "Toyota";
+const carModel = "RAV4";
+const carSpeed = 190;
+console.log(carBrand, carModel, carSpeed);
