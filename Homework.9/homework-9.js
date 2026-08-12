@@ -11,7 +11,8 @@ console.log(hasCat);
 const reverseArray = (array) => {
   array.reverse();
 };
-reverseArray(numbers, animals);
+reverseArray(numbers);
+reverseArray(animals);
 console.log(numbers);
 console.log(animals);
 //07. Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
