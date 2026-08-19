@@ -31,3 +31,8 @@ const renderProducts = (products) => {
   });
 };
 renderProducts(products);
+const getProductsInfo = products.reduce(
+  (acc, product) => [...acc, product.title, product.description],
+  [],
+);
+console.log(getProductsInfo);
