@@ -1,27 +1,31 @@
 import { products } from "./products.js";
 const getCardsCount = () => {
-  const count = +prompt("Сколько карточек отобразить? От 1 до 5 ");
-  return count >= 1 && count <= 5 ? count : getCardsCount();
+  let count = +prompt("Сколько карточек отобразить? От 1 до 5 ");
+  while (count < 1 || count > 5 || isNaN(count)) {
+    count = +prompt("Некорректный ввод. Введите число от 1 до 5");
+  }
+  return count;
 };
 const renderProducts = (products) => {
   const count = getCardsCount();
+  const productList = document.querySelector(".container__cards");
+  const productTemplate = document.querySelector(".product-template");
   products.forEach((product, index) => {
     if (index < count) {
-      const productList = document.querySelector(".container__cards");
-      const productTemplate = document.querySelector(".product-template");
       const productClone = productTemplate.content.cloneNode(true);
-      productClone.querySelector(".card__img").src = product.img;
+      const image = productClone.querySelector(".card__img");
+      image.src = product.img;
+      image.alt = product.title;
       productClone.querySelector(".card__skin-type").textContent =
         product.skinType;
       productClone.querySelector(".card__title").textContent = product.title;
       productClone.querySelector(".card__description").textContent =
         product.description;
-      productClone.querySelector(".card__composition").textContent =
-        product.composition;
       const items = productClone.querySelectorAll(".card__item");
-      items[0].textContent = product.item1;
-      items[1].textContent = product.item2;
-      items[2].textContent = product.item3;
+      const productItems = [product.item1, product.item2, product.item3];
+      items.forEach((item, index) => {
+        item.textContent = productItems[index];
+      });
       productClone.querySelector(".card__price-text").textContent =
         product.priceText;
       productClone.querySelector(".card__price").textContent =
@@ -31,8 +35,8 @@ const renderProducts = (products) => {
   });
 };
 renderProducts(products);
-const getProductsInfo = products.reduce(
+const productsInfo = products.reduce(
   (acc, product) => [...acc, product.title, product.description],
   [],
 );
-console.log(getProductsInfo);
+console.log(productsInfo);
