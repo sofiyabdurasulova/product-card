@@ -3,16 +3,14 @@
   margin: 0 auto;
   background: #fefffd;
   padding-bottom: 116px;
-  background-image: url('img/background.png');
+  background-image: url("img/background.png");
   background-repeat: no-repeat;
   background-position: center top;
 }
 
-
-
 body {
   color: #515076;
-  font-family: 'montserrat', sans-serif;
+  font-family: "montserrat", sans-serif;
   letter-spacing: 0%;
   margin: 0;
 }
@@ -31,7 +29,6 @@ body {
   height: 100px;
   margin: 0;
   padding: 10px 20px;
-
 }
 
 .header__logo {
@@ -62,7 +59,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 25px;
-  color: #5a5791
+  color: #5a5791;
 }
 
 .header__link {
@@ -104,7 +101,6 @@ body {
   margin-bottom: 110px;
 }
 
-
 .container__cards {
   display: flex;
   flex-wrap: wrap;
@@ -113,7 +109,6 @@ body {
   margin: 0 auto;
   width: 1110px;
 }
-
 
 .card {
   width: 340px;
@@ -142,7 +137,6 @@ body {
   transform: scale(1.03);
   background-image: url(img/background.png);
   cursor: pointer;
-
 }
 
 .card__img {
@@ -163,16 +157,12 @@ body {
   display: inline-block;
 }
 
-
-
-
-
 .card__skin-type {
   font-weight: 400;
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #A5A3B9;
+  color: #a5a3b9;
   margin-bottom: 5px;
 }
 
@@ -191,7 +181,6 @@ body {
   color: #515076;
   margin-bottom: 15px;
 }
-
 
 .card__composition {
   font-weight: 400;
@@ -285,7 +274,6 @@ body {
 
 .toggle-cards-active {
   background-color: #bcdac9;
-
 }
 
 .toggle-card-active {
