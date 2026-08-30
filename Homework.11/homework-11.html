@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>homework-11</title>
+    <link rel="stylesheet" href="homework-11.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="footer-container">
+      <footer>
+        <div class="footer__top">
+          <div class="footer__info">
+            <h2 class="footer__title">Product Cards</h2>
+            <p class="footer__subtitle">
+              У нас самые лучшие продукты для кожи!
+            </p>
+            <a href="#">
+              <img src="telegram.png" alt="Телеграм" />
+            </a>
+            <a href="#">
+              <img src="wk.png" alt="ВК" />
+            </a>
+          </div>
+
+          <form class="footer__subscribe">
+            <label class="footer__label">
+              <p class="footer__label-text">Подпишись на наши акции:</p>
+              <div class="footer__input-wrapper">
+                <input
+                  type="email"
+                  required
+                  placeholder="Введите ваш email"
+                  class="footer__input"
+                />
+                <button type="submit" class="footer__button">
+                  Подписатъся
+                </button>
+              </div>
+            </label>
+          </form>
+          <nav class="footer__nav">
+            <p class="nav__text">Быстрые ссылки</p>
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#">Главная</a></li>
+              <li class="nav__item"><a href="#">Магазин</a></li>
+              <li class="nav__item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            www.product-cards.com©all right reserve
+          </p>
+          <button class="footer__register-btn">Регистрация</button>
+        </div>
+      </footer>
+    </div>
+    <div class="overlay"></div>
+    <div class="modal">
+      <button class="modal-close">X</button>
+      <form class="register-form">
+        <label class="register-label">
+          Имя
+          <input type="text" name="name" placeholder="Введите имя" required />
+        </label>
+        <label class="register-label">
+          Фамилия
+          <input
+            type="text"
+            name="surname"
+            placeholder="Введите фамилию"
+            required
+          />
+        </label>
+        <label class="register-label">
+          Дата рождения
+          <input type="date" name="berthDate" required />
+        </label>
+        <label class="register-label">
+          Логин
+          <input
+            type="text"
+            name="login"
+            placeholder="Введите логин"
+            required
+          />
+        </label>
+        <label class="register-label">
+          Пароль
+          <input
+            type="password"
+            name="password"
+            placeholder="Введите пароль"
+            required
+            class="password"
+          />
+        </label>
+        <label class="register-label">
+          Повторите пароль
+          <input
+            type="password"
+            name="repeatPassword"
+            placeholder="Повторите пароль"
+            required
+            class="repeat-password"
+          />
+        </label>
+        <button class="register-btn" type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+    <script src="homework-11.js"></script>
+  </body>
+</html>
