@@ -29,6 +29,7 @@ registrForm.addEventListener("submit", (event) => {
   const formData = new FormData(registrForm);
   if (password.value !== repeatPassword.value) {
     alert("Пароли не совпадают");
+    return;
   } else user = Object.fromEntries(formData);
   user.password = btoa(user.password);
   user.repeatPassword = btoa(user.repeatPassword);
