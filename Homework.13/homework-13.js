@@ -1,6 +1,9 @@
-class Dark {
+class Drink {
   #temperature;
   constructor(name, size, price, temperature) {
+    if (new.target === Drink) {
+      throw new Error("Невозможно создать экземпляр абстрактного класса Drink");
+    }
     this.name = name;
     this.size = size;
     this.price = price;
@@ -15,43 +18,45 @@ class Dark {
   setTemperature(newTemperature) {
     this.#temperature = newTemperature;
   }
-  prepare() {
+
+  #prepare() {
+    this.setTemperature(this.#temperature);
     console.log(
       `Подготовка к использованию ${this.name} при температуре ${this.#temperature}`,
     );
   }
+  serveDrink() {
+    this.#prepare();
+    console.log(
+      `Подача напитка ${this.name} при температуре ${this.#temperature}`,
+    );
+  }
 }
-class Coffee extends Dark {
+class Coffee extends Drink {
   constructor(name, size, price, temperature, coffeeType) {
     super(name, size, price, temperature);
     this.coffeeType = coffeeType;
   }
-  prepare() {
-    console.log(
-      `Подготовка к использованию ${this.name} типа ${this.coffeeType} при температуре ${this.getTemperature()}`,
-    );
+  serveDrink() {
+    super.serveDrink();
   }
 }
-class Tea extends Dark {
+class Tea extends Drink {
   constructor(name, size, price, temperature, teaType) {
     super(name, size, price, temperature);
     this.teaType = teaType;
   }
-  prepare() {
-    console.log(
-      `Подготовка к использованию ${this.name} типа ${this.teaType} при температуре ${this.getTemperature()}`,
-    );
+  serveDrink() {
+    super.serveDrink();
   }
 }
-class Lemonade extends Dark {
+class Lemonade extends Drink {
   constructor(name, size, price, temperature, lemonadeType) {
     super(name, size, price, temperature);
     this.lemonadeType = lemonadeType;
   }
-  prepare() {
-    console.log(
-      `Подготовка к использованию ${this.name} типа ${this.lemonadeType} при температуре ${this.getTemperature()}`,
-    );
+  serveDrink() {
+    super.serveDrink();
   }
 }
 class Kafe {
@@ -64,22 +69,22 @@ class Kafe {
   }
   orderDrink(drink) {
     console.log(`Заказан напиток: ${drink.getInfo()}`);
-    drink.prepare();
+    drink.serveDrink();
   }
 }
 const iceAmericano = new Coffee(
   "Ледяной Американо",
   "Средний",
-  "250 ₽",
-  "-5°C",
+  250,
+  -5,
   "Американо",
 );
-const greenTea = new Tea("Зеленый чай", "Большой", "150 ₽", "80°C", "Зеленый");
+const greenTea = new Tea("Зеленый чай", "Большой", 150, 80, "Зеленый");
 const lemonLemonade = new Lemonade(
   "Лимонад с лимоном",
   "Маленький",
-  "200 ₽",
-  "5°C",
+  200,
+  5,
   "Лимонный",
 );
 const myKafe = new Kafe("Кофейня на углу", "ул. Пушкина, д. 10");
