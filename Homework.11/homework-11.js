@@ -29,6 +29,7 @@ registrForm.addEventListener("submit", (event) => {
   const isValid = formInstance.isValid();
   if (!isValid) {
     alert("Введите соответствующие данные");
+    this.form.reportValidity();
     return;
   }
   const values = formInstance.getValues();
