@@ -62,12 +62,14 @@
           <p class="footer__copyright">
             www.product-cards.com©all right reserve
           </p>
-          <button class="footer__register-btn">Регистрация</button>
+          <button class="footer__register-btn" id="registration-button">
+            Регистрация
+          </button>
         </div>
       </footer>
     </div>
     <div class="overlay" id="overlay"></div>
-    <div class="modal" id="modal">
+    <div class="modal" id="registration-modal">
       <button class="modal-close">X</button>
       <form class="register-form" id="registerForm">
         <label class="register-label">
@@ -119,6 +121,43 @@
         <button class="register-btn" type="submit">Зарегистрироваться</button>
       </form>
     </div>
-    <script type="module" src="homework-11.js"></script>
+
+    <button class="footer__auth-btn" id="auth-button">Войти</button>
+    <div class="modal" id="auth-modal">
+      <button class="modal-close">X</button>
+      <form class="register-form" id="registerForm">
+        <label class="register-label">
+          Логин
+          <input
+            type="text"
+            name="login"
+            placeholder="Введите логин"
+            required
+          />
+        </label>
+        <label class="register-label">
+          Пароль
+          <input
+            type="password"
+            name="password"
+            placeholder="Введите пароль"
+            required
+            class="password"
+          />
+        </label>
+        <label class="register-label">
+          Повторите пароль
+          <input
+            type="password"
+            name="repeatPassword"
+            placeholder="Повторите пароль"
+            required
+            class="repeat-password"
+          />
+        </label>
+        <button class="register-btn" type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+    <script type="module" src="../Homework.14/homework-14.js"></script>
   </body>
 </html>
