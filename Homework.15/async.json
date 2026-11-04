@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Sofia",
+    "surname": "Abdurasulova",
+    "age": 27,
+    "email": "sofa.00@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Mariya",
+    "surname": "Ivanova",
+    "age": 25,
+    "email": "marii.00@gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "Aisha",
+    "surname": "Ahmirova",
+    "age": 50,
+    "email": "aisha.00@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "Artyom",
+    "surname": "Kudryashkin",
+    "age": 45,
+    "email": "artyom.00@gmail.com"
+  }
+]
