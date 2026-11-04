@@ -2,9 +2,12 @@ const container = document.querySelector(".users");
 const showButton = document.querySelector(".show-users");
 const deleteButton = document.querySelector(".delete-users");
 let users = [];
+let originalUsers = [];
 
 showButton.addEventListener("click", () => {
-  renderUsers(users);
+  users = [...originalUsers];
+  localStorage.setItem("users", JSON.stringify(users));
+  renderUsers();
 });
 
 function delay(ms) {
@@ -19,13 +22,13 @@ async function getUsers() {
   return users;
 }
 async function saveData() {
-  const users = await getUsers();
-  console.log(users);
+  originalUsers = await getUsers();
+  users = [...originalUsers];
   const jsonStrin = JSON.stringify(users);
   console.log(jsonStrin);
   localStorage.setItem("users", jsonStrin);
 }
-function renderUsers(users) {
+function renderUsers() {
   console.log("Функция запустились");
   container.innerHTML = "";
 
@@ -48,7 +51,7 @@ function renderUsers(users) {
     button.addEventListener("click", () => {
       users = users.filter((user) => user.id !== Number(id.textContent));
       localStorage.setItem("users", JSON.stringify(users));
-      renderUsers(users);
+      renderUsers();
     });
     card.append(id, name, surname, age, email, button);
     container.append(card);
@@ -57,15 +60,15 @@ function renderUsers(users) {
 
 async function init() {
   try {
-    users = localStorage.getItem("users");
-    if (users === null) {
+    originalUsers = await getUsers();
+    const savedUsers = localStorage.getItem("users");
+    if (savedUsers === null) {
       await saveData();
       users = JSON.parse(localStorage.getItem("users"));
     } else {
-      users = JSON.parse(users);
+      users = JSON.parse(savedUsers);
     }
-    console.log(users);
-    renderUsers(users);
+    renderUsers();
     document.querySelector(".title").remove();
   } catch (error) {
     container.textContent = "Ошибка при загрузке данных";
@@ -74,6 +77,6 @@ async function init() {
 init();
 deleteButton.addEventListener("click", () => {
   users = [];
-  localStorage.removeItem("users");
-  renderUsers(users);
+  localStorage.setItem("users", JSON.stringify(users));
+  renderUsers();
 });
